@@ -86,9 +86,9 @@ font-family: 'Lato', sans-serif;
   }
   footer{
 min-width: 100%;
-background: rgb(255,165,145,0.7); /* Black background with 0.5 opacity */
+ /*setting alpha = 0.1*/ 
+background: rgb(255, 165, 145, 0.6); /* Pink background with 0.5 opacity */
 bottom: 0;
-opacity: 0.5;
   }
   .fa {
     font-size: 100px;
