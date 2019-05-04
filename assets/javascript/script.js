@@ -12,11 +12,11 @@ $(document).ready(function () {
 
             for (var i = 0; i < 16; i++) {
                 console.log(response);
-                console.log(response.restaurants[i].restaurant.name);
-                console.log(response.restaurants[i].restaurant.currency);
-                console.log(response.restaurants[i].restaurant.location.address);
-                console.log(response.restaurants[i].restaurant.menu_url);
-                console.log(response.restaurants[i].restaurant.photos_url);
+                // console.log(response.restaurants[i].restaurant.name);
+                // console.log(response.restaurants[i].restaurant.currency);
+                // console.log(response.restaurants[i].restaurant.location.address);
+                // console.log(response.restaurants[i].restaurant.menu_url);
+                // console.log(response.restaurants[i].restaurant.photos_url);
 
                 var restaurantDisplay = $("<div>");
                 restaurantDisplay.addClass("well");
@@ -43,11 +43,11 @@ $(document).ready(function () {
 
             for (var i = 0; i < 16; i++) { 
                 console.log(response);
-          console.log(response.hits[i].recipe.label);
-          console.log(response.hits[i].recipe.healthLabels);
-          console.log(response.hits[i].recipe.calories);
-          console.log(response.hits[i].recipe.ingredients);
-          console.log(response.hits[i].recipe.image);
+        //   console.log(response.hits[i].recipe.label);
+        //   console.log(response.hits[i].recipe.healthLabels);
+        //   console.log(response.hits[i].recipe.calories);
+        //   console.log(response.hits[i].recipe.ingredients);
+        //   console.log(response.hits[i].recipe.image);
 
           var recipeDisplay = $("<div>");
           recipeDisplay.addClass("well");
@@ -105,7 +105,7 @@ $(document).ready(function () {
         };
     }) //closes submit on click function
 }); //closes doc ready function
-Collapse
+
 
 
 

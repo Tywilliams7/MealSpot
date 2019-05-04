@@ -30,16 +30,16 @@
           <!--Search Bar and radio buttons-->
           <div class="wrap">
             <div class="search">
-              <input type="text" class="searchTerm" placeholder="You hungry?">
-              <button type="submit" class="searchButton">
+              <input type="text" class="searchTerm" id="searchArea" placeholder="You hungry?">
+              <button type="submit" class="searchButton" id="submit">
                 <i class="fa fa-search"></i>
               </button>
               <!-- Radio -->
               <div class="form-group form-check ml-3 text-white">
-                <input type="radio" class="form-check-input" id="exampleCheck1">
+                <input type="checkbox" class="form-check-input" id="recipe">
                 <label class="form-check-label" for="exampleCheck1">Recipes</label>
                 <div class="align-bottom">
-                  <input type="radio" class="form-check-input" id="exampleCheck1">
+                  <input type="checkbox" class="form-check-input" id="restaurant">
                   <label class="form-check-label" for="exampleCheck1">Restaurants</label>
                 </div>
               </div>
@@ -177,8 +177,8 @@
 
           </div>
         </div>
-        <!-- first card -->
-        <div class="card mb-5" style="display:none">
+        <!-- first card
+        <div class="card mb-5">
           <div class="card-header bg-info text-center">
           </div>
           <div class="card-body blue-card">
@@ -187,31 +187,50 @@
               <div class="col border-right border-white">
                 <h2 class="text-center underLine">Restaurants</h2>
                 <!--Results Dump-->
-                <div class="resultsDump"></div>
+                <!-- <div class="resultsDump" id="restaurantDisplay"></div>
               </div>
               <!--Recipes-->
-            </div>
+            <!-- </div>
             <a href="#" class="btn btn-primary"><i class="far fa-calendar-alt fa-md mr-2"></i>Add to
               calendar</a>
           </div>
-        </div>
+        </div> --> -->
+
+
         <!-- second card -->
-        <div class="card" style="display:none">
+        <!-- <div class="card">
           <div class="card-header bg-info text-center">
           </div>
           <div class="card-body blue-card">
             <div class="row">
               <!--Restaurant-->
-              <div class="col border-right border-white">
+              <!-- <div class="col border-right border-white">
                 <h2 class="text-center underLine">Restaurants</h2>
-                <div class="restaurantsResults"></div>
-              </div>
-              <!--Recipes-->
+                <div class="restaurantsResults" id="restaurantDisplay"></div>
+              </div> --> -->
 
-              <div class="col">
+              <!--Recipes-->
+              <!-- <div class="col">
                 <h2 class="text-center underLine">Recipes</h2>
-                <div class="recipeResults"></div>
-              </div>
+                <div class="recipeResults" id="recipeDisplay"></div>
+              </div> --> -->
+
+
+
+              <div class="panel panel-default">
+                <div class="panel-heading bg-info">
+                    <h3 class="panel-title">Search Results</h3>
+                </div>
+                <div class="panel-body bg-info" id="restaurantDisplay">
+                </div>
+
+                <div class="panel-body bg-info" id="recipeDisplay">
+                </div>
+
+            </div>
+
+
+
               <!--Add button-->
             </div>
             <a href="#" class="btn btn-primary"><i class="far fa-calendar-alt fa-md mr-2"></i>Add to
@@ -238,7 +257,7 @@
         <div class="col">
           <h2>About the site</h2>
           <p class="font-weight-light p-2">
-            The founding fathers(and mother) created this site in hopes 
+            The founding fathers (and mother) created this site in hopes 
             of leading you to your next great meal.
           </p>
           <a href="#"><i class="fab fa-facebook-square fa-3x ml-2"></i></a>
