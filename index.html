@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
     integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script type="text/javascript" src="https://addevent.com/libs/atc/1.6.1/atc.min.js" async defer></script>
 
 </head>
 </head>
@@ -27,14 +28,14 @@
             <img src="assets/images/logo-light.png" width="100" height="100" class="d-inline-block align-top"
               alt="logo">
           </a>
-          <!--Search Bar and radio buttons-->
+          <!--Search Bar and checkbox buttons-->
           <div class="wrap">
             <div class="search">
               <input type="text" class="searchTerm" id="searchArea" placeholder="You hungry?">
               <button type="submit" class="searchButton" id="submit">
                 <i class="fa fa-search"></i>
               </button>
-              <!-- Radio -->
+              <!-- Checkbox -->
               <div class="form-group form-check ml-3 text-white">
                 <input type="checkbox" class="form-check-input" id="recipe">
                 <label class="form-check-label" for="exampleCheck1">Recipes</label>
@@ -96,6 +97,31 @@
           </div>
         </div>
 
+
+
+        <div class="panel panel-default" id="bothDisplay">
+          <div class="panel-heading bg-info">
+              <h3 class="panel-title">Search Results</h3>
+          </div>
+          <div class="panel-body bg-info" id="restaurantDisplay">
+          </div>
+
+          <div class="panel-body bg-info" id="recipeDisplay">
+          </div>
+
+      </div>
+
+
+
+        <div title="Add to Calendar" class="addeventatc" id="displayCalendar">
+          Add to Calendar
+          <span class="start">05/18/2019 08:00 AM</span>
+          <span class="end">05/18/2019 10:00 AM</span>
+          <span class="timezone">America/Los_Angeles</span>
+          <span class="title">Summary of the event</span>
+          <span class="description">Description of the event</span>
+          <span class="location">Location of the event</span>
+      </div>
 
         <div id="carouselExampleControls" class="carousel slide mb-4" data-ride="carousel">
           <div class="carousel-inner" style="height: 500px">
@@ -194,7 +220,7 @@
             <a href="#" class="btn btn-primary"><i class="far fa-calendar-alt fa-md mr-2"></i>Add to
               calendar</a>
           </div>
-        </div> --> -->
+        </div> --> 
 
 
         <!-- second card -->
@@ -207,34 +233,22 @@
               <!-- <div class="col border-right border-white">
                 <h2 class="text-center underLine">Restaurants</h2>
                 <div class="restaurantsResults" id="restaurantDisplay"></div>
-              </div> --> -->
+              </div> -->
 
               <!--Recipes-->
               <!-- <div class="col">
                 <h2 class="text-center underLine">Recipes</h2>
                 <div class="recipeResults" id="recipeDisplay"></div>
-              </div> --> -->
+              </div> --> 
 
 
 
-              <div class="panel panel-default">
-                <div class="panel-heading bg-info">
-                    <h3 class="panel-title">Search Results</h3>
-                </div>
-                <div class="panel-body bg-info" id="restaurantDisplay">
-                </div>
 
-                <div class="panel-body bg-info" id="recipeDisplay">
-                </div>
-
-            </div>
-
-
-
-              <!--Add button-->
-            </div>
-            <a href="#" class="btn btn-primary"><i class="far fa-calendar-alt fa-md mr-2"></i>Add to
-              calendar</a>
+            
+                          <!--Add button-->
+                        </div>
+                        <!-- <a href="#" class="btn btn-primary"><i class="far fa-calendar-alt fa-md mr-2"></i>Add to
+                          calendar</a> -->
           </div>
         </div>
 

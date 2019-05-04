@@ -1,4 +1,7 @@
 $(document).ready(function () {
+    $("#bothDisplay").hide();
+    $("#displayCalendar").hide();
+
     function runQuery(queryURL) {
         $.ajax({
             url: queryURL,
@@ -7,10 +10,11 @@ $(document).ready(function () {
             contentType: "application/JSON",
         }).then(function (response) {
             $("#restaurantDisplay").empty();
+            $("#recipeDisplay").empty();
             console.log(response);
 
 
-            for (var i = 0; i < 16; i++) {
+            for (var i = 0; i < 6; i++) {
                 console.log(response);
                 // console.log(response.restaurants[i].restaurant.name);
                 // console.log(response.restaurants[i].restaurant.currency);
@@ -40,8 +44,10 @@ $(document).ready(function () {
         method: "GET"
       }).then(function(response) {
         $("#recipeDisplay").empty();
+        $("#restaurantDisplay").empty();
 
-            for (var i = 0; i < 16; i++) { 
+
+            for (var i = 0; i < 6; i++) { 
                 console.log(response);
         //   console.log(response.hits[i].recipe.label);
         //   console.log(response.hits[i].recipe.healthLabels);
@@ -77,9 +83,9 @@ $(document).ready(function () {
 
         var restaurant = $('#restaurant').is(":checked")
 
-        var queryURL = "https://cors-anywhere.herokuapp.com/https://developers.zomato.com/api/v2.1/search?entity_id=601&entity_type=city&count=15";
+        var queryURL = "https://cors-anywhere.herokuapp.com/https://developers.zomato.com/api/v2.1/search?entity_id=601&entity_type=city&count=5";
 
-        var queryURLrecipe = "https://cors-anywhere.herokuapp.com/https://api.edamam.com/search?app_id=da06b7eb&app_key=3b93ed52b89ba41f57fb99a692028518&to=15&q=" + queryTerm;
+        var queryURLrecipe = "https://cors-anywhere.herokuapp.com/https://api.edamam.com/search?app_id=da06b7eb&app_key=3b93ed52b89ba41f57fb99a692028518&to=5&q=" + queryTerm;
 
         var newURL = queryURL + "&q=" + queryTerm;
         console.log(newURL);
@@ -89,23 +95,24 @@ $(document).ready(function () {
 
 //If only Restaurant box selected
         if (!recipe && restaurant) {
+            $("#bothDisplay").show();
             runQuery(newURL);
 
 
 //Only recipe box selected
         } else if (recipe && !restaurant) {
+            $("#recipeDisplay").show();
             searchRecipe(queryURLrecipe);
      
 
 //Both restaurant & recipe box selected
         } else if (restaurant && recipe) {
+            $("#recipeDisplay").show();
+            $("#restaurantDisplay").show();
+
             runQuery(newURL);
             searchRecipe(queryURLrecipe);
 
         };
     }) //closes submit on click function
 }); //closes doc ready function
-
-
-
-
